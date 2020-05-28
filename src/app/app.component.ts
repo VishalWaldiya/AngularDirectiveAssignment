@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'DirectiveAssignment';
+  content = 'This is Paragraph Content';
+  statuscontent = false;
+  numbers = [];
+  
+  toggleContent() {
+    this.statuscontent = !this.statuscontent
+    this.numbers.push(this.numbers.length + 1)
+  }
+
+  getColor(number){
+    console.log(number)
+    if (this.numbers.length >=5 ){
+      return "blue";
+    }
+  }
+
 }
