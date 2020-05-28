@@ -12,7 +12,7 @@ export class AppComponent {
   
   toggleContent() {
     this.statuscontent = !this.statuscontent
-    this.numbers.push(this.numbers.length + 1)
+    this.numbers.push(new Date())
   }
 
   getColor(number){

@@ -2,4 +2,4 @@
   Display Details
 </button>
 <h4 *ngIf="statuscontent">{{content}}</h4>
-<p *ngFor="let number of numbers" [ngStyle] = "{backgroundColor: number >=5 ? 'blue':'transparent'}" [ngClass]="{special: number >=5}" >Clicked {{ number }} times</p>
+<p *ngFor="let number of numbers; let i = index" [ngStyle] = "{backgroundColor: i+1 >=5 ? 'blue':'transparent'}" [ngClass]="{special: i+1 >=5}" >Clicked @ {{ number }} {{i+1}} times</p>
